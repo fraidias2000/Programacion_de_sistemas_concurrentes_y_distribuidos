@@ -1,0 +1,157 @@
+V "GNAT Lib v2019"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_RELATIVE_DELAY
+RV NO_SELECT_STATEMENTS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
+RV NO_TERMINATE_ALTERNATIVES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+RV MAX_SELECT_ALTERNATIVES=2
+RV MAX_TASK_ENTRIES=1
+RV MAX_TASKS=1+
+
+U gestoria%b		gestoria.adb		b2260125 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-calend.ads		20190518041256 474d9720 ada.calendar%s
+D a-caldel.ads		20190518041256 9f20b83d ada.calendar.delays%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041256 bf4f806b ada.finalization%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20190518041256 bb51c45a ada.numerics%s
+D a-nudira.ads		20190518041256 71e55def ada.numerics.discrete_random%s
+D a-nudira.adb		20190518041256 72908cdb ada.numerics.discrete_random%b
+D a-reatim.ads		20190518041258 0240fc73 ada.real_time%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D gestoria.adb		20191127114704 6d3789a7 gestoria%b
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-c.ads		20190518041256 5421119b interfaces.c%s
+D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041258 32a08138 system%s
+D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-imguns.ads		20190518041256 9ff43cf7 system.img_uns%s
+D s-multip.ads		20190518041256 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20190518041258 97504df8 system.os_interface%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-rannum.ads		20190518041256 99ade2f2 system.random_numbers%s
+D s-rannum.adb		20190518041258 20ba1217 system.random_numbers%b
+D s-ransee.ads		20190518041258 01a57b33 system.random_seed%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stausa.ads		20190518041256 017a0a05 system.stack_usage%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20190518041258 601f6b72 system.task_info%s
+D s-taspri.ads		20190518041258 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20190518041258 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20190518041258 b9d612e2 system.tasking%s
+D s-taprob.ads		20190518041258 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20190518041258 60ad3dae system.tasking.protected_objects.entries%s
+D s-tasren.ads		20190518041258 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20190518041258 cca55c94 system.tasking.stages%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-valuns.ads		20190518041258 35067db9 system.val_uns%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
+G a e
+G c Z b b [gestoria standard 4 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 15|1r6 2r5 3r6 24r31
+X 7 a-numeri.ads
+16K13*Numerics 32e17 15|3r10 24r35
+X 8 a-nudira.ads
+44k22*Discrete_Random 75e33 15|3w19 24r44
+50R9 Generator<30|63R9> 15|25r20[24]
+52V13 Random{integer} 15|28s26[24]
+55U14 Reset<30|100p14> 15|27s19[24]
+X 9 a-nudira.adb
+53V16 Random[30|83]{integer} 31|392b13[15|24]
+X 13 a-textio.ads
+57K13*Text_IO 727e16 15|1w10 2r9
+508U14*Put_Line 15|39s13 42s16 66s25 72s30 81s19 108s25 121s19
+X 15 gestoria.adb
+4U11*Gestoria 4b11 164l8 164t16
+5N4 MAX_EMPLEADOS 57r40 99r38
+6N4 MAX_CLIENTES
+7N4 TIEMPO_HABLAR_JEFE 43r22 73r36
+8N4 TIEMPO_DESCANSO 82r25 122r25
+10T14 EmpleadoParticular 12l8 12e26 49b14 89l11 89t29
+11Y13 atenderCliente 11>28 57r16 63b23 76l20 76t34
+11i28 id{natural} 64r36
+14T15 EmpleadoEmpresa 16l8 16e23 91b14 130l8 130t23
+15Y13 atenderCliente 15>28 99r14 105b26 116l23 116t37
+15i28 id{natural} 106r36
+18T14 Cliente 18d22 18d33 19l8 19e15 132b14 160l8 160t15
+18i22 id{natural} 135r26
+18b33 cat{boolean} 134r27
+22V13 Generate_Number{integer} 22b13 22>30 29l8 29t23 69s44 79s35 111s44
+. 119s35 142s27 151s30
+22i30 MaxValue{integer} 23r46
+23I12 Random_Type{integer} 24r61
+24K12 Random_Pack[8|44] 25r8 27r7 28r14
+25r4 G{8|50R9[24]} 27r26 28r34
+31t9 Jefe 35b14 47l7 47t11 71r30 113r29
+32Y13 atenderEmpleado 38r13 41b20 44l17 44t32 71s35 113s34
+50b7 disponible{boolean} 62r21 65m25 75m25
+51i7 irAlJefe{natural} 70r28
+52i7 numeroAleatorio{natural} 69m25 79m16 80r19
+53i7 idCliente{natural} 64m25
+63i38 id{natural}
+92b7 disponible{boolean} 104r21 107m25 115m25
+93i7 irAlJefe{natural} 112r28
+94i7 numeroAleatorio{natural} 111m25 119m16 120r19
+95i7 idCliente{natural} 106m25
+105i41 id{natural}
+133i7 NecesitaVolver{natural} 142m10 143r13 151m13 152r16
+134b7 categoria{boolean} 137r10
+135i7 idCliente{natural}
+X 16 interfac.ads
+74M9*Unsigned_32
+77M9*Unsigned_64
+X 30 s-rannum.ads
+75V13*Random{16|74M9} 31|221i21
+76V13*Random{16|77M9} 31|221i21
+X 36 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

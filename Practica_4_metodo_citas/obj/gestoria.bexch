@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__gestoria.o
+[PROJECT FILES]
+C:\Users\aculplay\Desktop\INGENIERIA_INFORMATICA\2\PROGRAMACION_DE_SISTEMAS_CONCURRENTES_Y_DISTRIBUIDOS\PRACTICAS\practica_5\gestoria.gpr
+20191127082338
+[BOUND OBJECT FILES]
+C:\Users\aculplay\Desktop\INGENIERIA_INFORMATICA\2\PROGRAMACION_DE_SISTEMAS_CONCURRENTES_Y_DISTRIBUIDOS\PRACTICAS\practica_5\obj\gestoria.o
+[GENERATED SOURCE FILES]
+b__gestoria.ads
+b__gestoria.adb
+b__gestoria.ali
+[RESULTING OPTIONS]
+-LC:\Users\aculplay\Desktop\INGENIERIA_INFORMATICA\2\PROGRAMACION_DE_SISTEMAS_CONCURRENTES_Y_DISTRIBUIDOS\PRACTICAS\practica_5\obj\
+-LC:\Users\aculplay\Desktop\INGENIERIA_INFORMATICA\2\PROGRAMACION_DE_SISTEMAS_CONCURRENTES_Y_DISTRIBUIDOS\PRACTICAS\practica_5\obj\
+-LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnarl.a
+C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnat.a
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

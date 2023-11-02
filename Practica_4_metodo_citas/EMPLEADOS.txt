@@ -1,0 +1,78 @@
+task body EmpleadoParticular is
+      particularesDisponibles:Natural := MAX_EMPLEADOS_PAR;
+      irAlJefe:Natural:= 0;
+      numeroAleatorio:Natural;
+      idCliente:Natural;
+   begin
+         loop
+            select
+               when particularesDisponibles > 0 =>
+               accept atenderCliente(id:Natural)  do
+                  particularesDisponibles:= particularesDisponibles -1;     
+                  idCliente:=id;
+                  
+
+                  --EMPLEADO PARTICULAR VA A HABLAR CON JEFE
+                        numeroAleatorio := Generate_Number(2);
+                        if irAlJefe = 1 then
+                             Jefe.atenderEmpleado;
+                             Put_Line("El jefe esta hablando con un empleado particular");
+                             delay TIEMPO_HABLAR_JEFE;
+                        end if;
+                  particularesDisponibles := particularesDisponibles + 1;
+                  end atenderCliente;
+
+               --DESCANSO EMPLEADO PARTICULAR
+               numeroAleatorio := Generate_Number(2);
+               if numeroAleatorio = 1 then
+                  Put_Line("Un empleado particular se ha ido a tomar un descanso");
+                  delay TIEMPO_DESCANSO;
+               end if;
+            or
+               terminate;
+               end select;
+
+            end loop;
+      end EmpleadoParticular;
+--------------------------------------------------------------------------------
+   task body EmpleadoEmpresa is
+      disponible:Boolean:=true;
+      irAlJefe:Natural:= 0;
+      numeroAleatorio:Natural;
+      idCliente:Natural := id;
+      begin
+      loop
+         --Si todos los Empleados empresa estan ocupados
+          if atenderCliente'Count >= MAX_EMPLEADOS then
+            null;--EmpleadoParticular.atenderCliente(id);
+         end if;
+         --Si algún empleado empresa esta libre
+            select
+               when disponible = true =>
+                  accept atenderCliente(id:Natural)  do
+                        idCliente:=id;
+                        disponible:= false;
+                        Put_Line("Atendiendo");
+                        delay TIEMPO_ATENDER;
+
+                  --EMPLEADO EMPRESA VA A HABLAR CON JEFE
+                        numeroAleatorio := Generate_Number(2);
+                        if irAlJefe = 1 then
+                            Jefe.atenderEmpleado;
+                        end if;
+                        disponible:= true;
+                  end atenderCliente;
+
+               --DESCANSO EMPLEADO EMPRESA
+               numeroAleatorio := Generate_Number(2);
+               if numeroAleatorio = 1 then
+                  Put_Line("Un empleado empresa se ha ido a tomar un descanso");
+                  delay TIEMPO_DESCANSO;
+               end if;
+            or
+                  terminate;
+
+            end select;
+
+      end loop;
+   end EmpleadoEmpresa;
