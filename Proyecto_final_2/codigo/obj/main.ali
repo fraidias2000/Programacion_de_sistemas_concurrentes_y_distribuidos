@@ -1,0 +1,297 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_RELATIVE_DELAY
+RV NO_SECONDARY_STACK
+RV NO_SELECT_STATEMENTS
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_ALLOCATORS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
+RV NO_TERMINATE_ALTERNATIVES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV MAX_SELECT_ALTERNATIVES=3
+RV MAX_TASK_ENTRIES=2
+RV MAX_TASKS=1+
+
+U main%b		main.adb		9183baf8 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
+Z system.concat_5%s	s-conca5.adb		s-conca5.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-calend.ads		20200819050642 474d9720 ada.calendar%s
+D a-caldel.ads		20200819050642 9f20b83d ada.calendar.delays%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-finali.ads		20200819050644 bf4f806b ada.finalization%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20200819050644 bb51c45a ada.numerics%s
+D a-nudira.ads		20200819050644 5984dff3 ada.numerics.discrete_random%s
+D a-nudira.adb		20200819050644 0bfd6ec4 ada.numerics.discrete_random%b
+D a-reatim.ads		20200819050642 0240fc73 ada.real_time%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-c.ads		20200819050646 c624fa43 interfaces.c%s
+D i-cstrin.ads		20200819050646 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D main.adb		20210103175110 108b2dc7 main%b
+D system.ads		20200819050648 32a08138 system%s
+D s-atacco.ads		20200819050646 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20200819050646 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20200819050646 0b705ca5 system.concat_3%s
+D s-conca4.ads		20200819050646 7e642b20 system.concat_4%s
+D s-conca5.ads		20200819050646 875e432e system.concat_5%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-finroo.ads		20200819050646 4ff27390 system.finalization_root%s
+D s-imgint.ads		20200819050646 02dbe0c2 system.img_int%s
+D s-imguns.ads		20200819050646 9ff43cf7 system.img_uns%s
+D s-multip.ads		20200819050646 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20200819050642 97504df8 system.os_interface%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-rannum.ads		20200819050648 99ade2f2 system.random_numbers%s
+D s-rannum.adb		20200819050648 5f999925 system.random_numbers%b
+D s-ransee.ads		20200819050648 01a57b33 system.random_seed%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200819050648 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20200819050642 601f6b72 system.task_info%s
+D s-taspri.ads		20200819050642 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20200819050642 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20200819050642 88fba9ad system.tasking%s
+D s-taprob.ads		20200819050642 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20200819050642 60ad3dae system.tasking.protected_objects.entries%s
+D s-tasren.ads		20200819050642 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20200819050642 cca55c94 system.tasking.stages%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-valuns.ads		20200819050648 35067db9 system.val_uns%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D s-win32.ads		20200819050648 15ac53fb system.win32%s
+G a e
+G c Z b b [main standard 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 19|1w6 1r15 2r6 3r6 4r5 71r34
+X 7 a-numeri.ads
+16K13*Numerics 32e17 19|2r10 71r38
+X 8 a-nudira.ads
+44k22*Discrete_Random 81e33 19|2w19 71r47
+50R9 Generator<35|63R9> 19|72r23[71]
+52V13 Random{integer} 19|75s26[71]
+61U14 Reset<35|100p14> 19|74s19[71]
+X 9 a-nudira.adb
+53V16 Random[35|83]{integer} 36|393b13[19|71]
+65V16 Random[35|83]{integer} 36|393b13[19|71]
+X 13 a-textio.ads
+57K13*Text_IO 727e16 19|3w10 4r9
+508U14*Put_Line 19|86s19 95s16 117s22 121s19 127s19 131s19 134s16 155s16
+. 161s22 169s19 175s16 203s16 233s16 243s28 246s34 266s22 281s22 284s18 292s19
+. 294s19 315s7 320s16 323s19 331s25 344s28 347s31 351s34 354s31 364s22 369s25
+. 373s22 378s16 385s22 396s13 402s10 414s16 415s16 419s19 422s19 428s16
+X 15 interfac.ads
+74M9*Unsigned_32
+77M9*Unsigned_64
+X 19 main.adb
+5U11*Main 5b11 442l5 442t9
+7N4 MAX_CLIENTES 64r24 438r17
+8N4 MAX_MESAS 143r24 149r19 158r61
+9N4 MAX_SILLAS 14r39 15r35 227r27 236r48 240r32 287r31
+10N4 MAX_FICHAS 79r37 88r40
+11N4 MAX_TRAGAPERRAS 407r42
+12N4 MAX_REFRESCOS 106r41 171r38
+13N4 MAX_PERSONAS 115r41
+14N4 MAX_CLIENTES_CAFETERIA 226r40 244r40 262r44
+15N4 MAX_CLIENTES_ESPERA 144r40 192r59 204r73
+17N4 TIEMPO_REPONER_FICHAS 87r25
+18N4 TIEMPO_REFRESCO 349r37
+19N4 TIEMPO_TRAGAPERRAS 416r22
+20N4 TIEMPO_LIMPIEZA_CAFETERIA 176r22
+21N4 TIEMPO_REPONER_REFRESCOS 170r25
+22N4 TIEMPO_CAMBIAR_FICHAS 96r22
+23N4 TIEMPO_JUGAR_POKER 274r25
+25T14 Cliente 25d22 28l8 28e15 63r32 303b16 403l11 403t18 439r29
+25i22 identificador{integer} 305r22
+26Y13 volverPartidaPoker 205s59 247s67 350b38 352l35 352t53 368b29 370l26
+. 370t44
+27Y13 puedeJugarPoker 341b29 359l26 359t41
+30t9 Recepcionista 78b14 103l8 103t21 314r7 332r25 386r22 397r13 401r10
+31Y13 pedirFichas 31<26 84b20 92l20 92t31 314s21 332s39 386s36 397s27
+31i26 fichas{integer} 91m16 91r16
+32Y13 cambiarFichas 32>27 94b20 97l17 97t30 401s24
+32i27 id{integer} 95r54
+35t10 Encargado 118r22 130r19 142b14 213l8 213t17 293r19 321r16 324r19 342r25
+. 348r31 357r28 365r22 371r22 374r22
+36Y13 comprobarYOcuparMesa 36=34 36>68 36<95 36<115 154b20 166l20 166t40
+. 321s26 342s35
+36b34 sillaHaSidoOcupada{boolean} 156m16 156r16 158r26 159m47 159r47 160r22
+36i68 numeroCliente{integer} 155r94 159r66 161r60
+36i95 mesa{integer} 162m22 162r22
+36b115 ultimaSilla{boolean} 159m80 159r80
+37Y13 reponerRefrescos 37<30 130s29 168b23 172l20 172t36
+37i30 numeroRefrescos{integer} 171m19 171r19
+38Y13 limpiarSala 38<25 118s32 174b20 178l17 178t28
+38i25 cantidadPersonas{integer} 177m16 177r16
+39Y13 jugarPartida 39>26 39=42 39>65 185b20 187l17 187t29 371s32 374s32
+39i26 mesa{integer} 186r22
+39i42 fichas{integer} 186m41 186r41
+39i65 idCliente{integer} 186r48
+40Y13 irCafereria 40>25 40>42 181b20 183l17 183t28 348s41 365s32
+40i25 mesa{integer} 182r22
+40i42 idCliente{integer} 182r40
+41Y13 reservarMesa 41>26 189b20 199l17 199t29 324s29 357s38
+41i26 idCliente{integer} 194r55
+42Y13 llamarClientesEsperaPoker 42>39 201b20 208l17 208t42 293s29
+42i39 cuenta{integer}
+45T14 Croupier 45d23 49l8 49e16 61r33 150r26 215b14 301l8 301t16
+45i23 identificador{integer} 216r22
+46Y13 ocuparSilla 46<25 46>56 46<83 159s35 231b20 256l17 256t28
+46b25 sillaHaSidoOcupada{boolean} 254m16 254r16
+46i56 numeroCliente{integer} 238r39
+46b83 ultimo{boolean} 255m16 255r16
+47Y13 jugarPartida 47=26 47>49 186s28 272b20 296l17 296t29
+47i26 fichas{integer} 277m16 277r16 277r26 282m22 282r22 282r32
+47i49 idCliente{integer} 280r44 281r60 284r56
+48Y13 irCafeteria 48>25 182s28 259b20 270l17 270t28
+48i25 idCliente{integer} 264r47 266r90
+51T14 Tragaperras 54l8 54e19 66r19 405b14 435l8 435t19
+52Y13 jugar 52=19 52>42 328s39 333s39 382s36 387s36 412b20 425l17 425t22
+52i19 fichas{integer} 420m19 420r19 420r29 423m19 423r19 423r29
+52i42 id{integer} 414r55 419r58 422r58
+53Y13 liberar 53>21 329s39 334s39 383s36 388s36 427b20 430l17 430t24
+53i21 id{integer} 428r55
+56t9 Cafeteria 105b14 140l11 140t20 337r22 338r22 366r22 367r22 391r19 392r19
+57Y13 pedirRefresco 57>27 125b20 135l17 135t30 338s32 367s32 392s29
+57i27 id{integer} 127r57 134r54
+58Y13 entrarSala 58>24 113b23 122l17 122t27 337s32 366s32 391s29
+58i24 id{integer} 121r57
+61P9 CroupierAcces(45T14) 143r38
+63P9 ClienteAcces(25T14) 64r41
+64a4 Clientes(63P9) 205r19 247r34 439m10
+66t4 miTragaperras{51T14} 328r25 329r25 333r25 334r25 382r22 383r22 387r22
+. 388r22
+69V12 Generate_Number{integer} 69b12 69>29 76l8 76t23 275s36 318s25 325s32
+. 345s45 362s38 379s29 399s26 417s27
+69i29 MaxValue{integer} 70r49
+70I15 Random_Type{integer} 71r64
+71K15 Random_Pack[8|44] 72r11 74r7 75r14
+72r7 G{8|50R9[71]} 74r26 75r34
+79i7 fichasDisponibles{integer} 83r18 85r19 88m19 90m16 90r37
+84i33 fichas{integer}
+94i35 id{integer}
+106i7 refrescosDisponibles{integer} 126r19 127r106 128m19 128r42 130m46 131r71
+. 132m19 132r42
+107b7 salaDisponible{boolean} 112r18 116m22 119m22 124r18
+108i7 cantidadPersonas{integer} 114m19 114r38 115r22 118m44
+113i35 id{integer}
+125i34 id{integer}
+143a7 mesas(61P9) 150m10 159r19 182r16 186r16
+144a7 clientesEsperaPoker(integer) 193r22 194m22 204r22 205r28
+145i7 iterador{integer} 157m16 158r49 159r25 161r129 162r30 164m19 164r31
+. 191m16 192r47 193r42 194r42 197m19 197r31 202m16 204r42 204r61 205r48 206m19
+. 206r31
+146b7 reservaRealizada{boolean} 190m16 192r26 195m22
+149i11 i{integer} 150r16 150r35
+154b41 sillaHaSidoOcupada{boolean}
+154i75 numeroCliente{integer}
+154i102 mesa{integer}
+154b122 ultimaSilla{boolean}
+168i40 numeroRefrescos{integer}
+174i32 cantidadPersonas{integer}
+181i33 mesa{integer}
+181i52 idCliente{integer}
+185i33 mesa{integer}
+185i49 fichas{integer}
+185i72 idCliente{integer}
+189i34 idCliente{integer}
+201i47 cuenta{integer}
+216i7 id{integer} 233r53 243r77 246r73 281r124 284r122
+217i7 contador{integer} 273r19 278m16 278r27 286r19 291m19
+218i7 meVoy{integer} 294r64
+219b7 mesaLlena{boolean} 236r67 242m28 290m19
+220i7 i{integer} 235m16 236r43 237r32 238r32 240r28 252m19 252r24 260m16
+. 262r39 263r42 264r42 268m19 268r24
+221b7 sillaOcupada{boolean} 232m16 236r26 239m25 254r38
+222i7 clienteGanador{integer} 275m19 280r26
+223b7 ultimaSilla{boolean} 234m16 241m28 255r26
+224b7 apuntado{boolean} 261m16 262r26 265m22
+225i7 contador2{integer} 293r55
+226a7 clientesEnCafeteria(integer) 245r34 246r120 247r43 263r22 264m22
+227a7 sillas(integer) 237r25 238m25 280r19 288m22
+231b33 sillaHaSidoOcupada{boolean}
+231i64 numeroCliente{integer}
+231b91 ultimo{boolean}
+244i32 j{integer} 245r54 246r140 247r63
+259i33 idCliente{integer}
+272i34 fichas{integer}
+272i57 idCliente{integer}
+287i23 i{integer} 288r29
+304i7 fichas{integer} 314m33 315r84 317r13 327r25 328m45 328r45 332m51 333m45
+. 333r45 371m58 371r58 374m58 374r58 381r22 382m42 382r42 386m48 387m42 387r42
+. 397m39 402r87
+305i7 id{integer} 315r46 320r55 321r61 324r42 328r52 329r47 331r63 333r52
+. 334r47 337r43 338r46 342r70 344r81 347r69 348r66 351r72 354r69 357r51 364r60
+. 365r57 366r43 367r46 369r63 371r65 373r60 374r65 378r55 382r49 383r44 385r60
+. 387r49 388r44 391r40 392r43 396r51 401r38 402r48
+306i7 eleccion{integer} 318m13 319r16
+307i7 eleccion2{integer} 325m19 326r22 379m16 380r19
+308i7 volverAJugar{integer} 316r13 399m10
+309i7 tomarRefresco{integer} 345m28 346r31 362m21 363r22
+310b7 ultimaSilla{boolean} 321m78 342m86 346r57 363r48
+311b7 sillaOcupada{boolean} 321m47 321r47 322r19 340r29 342m56 342r56 343r28
+312i7 mesaAsignada{integer} 321m65 342m73 348r53 365r44 371r45 374r45
+406i7 ganador{integer} 417m16 418r19
+407i7 TragaperrasDisponibles{integer} 411r18 413m16 413r42 415r68 429m16
+. 429r42
+412i27 fichas{integer}
+412i50 id{integer}
+427i29 id{integer}
+438i9 i{integer} 439r19 439r37
+X 35 s-rannum.ads
+75V13*Random{15|74M9} 36|221i21
+76V13*Random{15|77M9} 36|221i21
+X 41 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+
