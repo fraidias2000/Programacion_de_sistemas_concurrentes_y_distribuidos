@@ -1,0 +1,2 @@
+gasolinera.adb:85:13: invalid conversion, not compatible with type "Standard.Natural"
+gasolinera.adb:125:16: illegal operand for array conversion
