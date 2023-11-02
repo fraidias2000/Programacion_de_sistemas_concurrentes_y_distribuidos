@@ -1,0 +1,6 @@
+main.adb:14:01: missing "end mostrador;"
+main.adb:15:07: declarations must come before "begin"
+main.adb:17:07: no "begin" for this "end"
+main.adb:19:07: declarations must come before "begin"
+main.adb:20:10: missing "begin" for procedure "dejarBoli" at line 19
+main.adb:22:01: "end Main;" expected
