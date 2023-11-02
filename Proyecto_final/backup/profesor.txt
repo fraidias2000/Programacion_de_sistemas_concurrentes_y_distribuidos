@@ -1,0 +1,41 @@
+package selectividad;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author aculplay
+ */
+public class Profesor extends Thread {
+    static final int MAX_HOJAS = 10;
+    public int id ;
+
+    public Profesor(int id) {
+        this.id = id;
+    }
+    public void run(){ 
+        try {
+            while(true){
+                Semaforos.todosListos.acquire(); //Espera a que esten todos los alumnos
+            
+                Semaforos.mutex.acquire();
+                for(int i = 0; i <= 5 ; i++){ //Como sabemos que tiene que entregar si o si 20 hojas, hacemos un bucle for
+                    if (Semaforos.Hojas == 0){
+                        System.out.println("El profesor " + id +" ha ido a por más hojas");
+                        Thread.sleep(2000);
+                        Semaforos.Hojas = MAX_HOJAS;
+                    }else{
+                        Semaforos.examen[this.id].release();//Le entrega una hoja a un alumno
+                        Semaforos.Hojas --;
+                        System.out.println("El profesor ha entregado una hoja al alumno " + i);
+                    }
+                }
+                Semaforos.mutex.release();
+            }
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Profesor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+}
+}

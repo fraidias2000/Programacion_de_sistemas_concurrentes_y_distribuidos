@@ -1,0 +1,67 @@
+package selectividad;
+import java.util.concurrent.Semaphore;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static selectividad.Semaforos.AulaLLena;
+
+/**
+ *
+ * @author aculplay
+ */
+public class Alumno extends Thread {
+    static int aulaAsignada = 0;
+    int miAsignacion = 0;
+    private int id;
+    
+    
+    public Alumno(int id) {
+        this.id = id;
+    }
+    
+    public void setAulaAsignada(int aulaAsignada) { //Aqui nos asignará el administrador el aula que este libre
+        this.aulaAsignada = aulaAsignada;
+    }
+    
+     public void run(){
+        try  {
+            Semaforos.entrarAula.release();//Pide al administrador poder entrar al aula
+            Semaforos.asignacion.acquire();//Espera a que le atienda y le diga que aula le toca
+            miAsignacion = aulaAsignada; //Creamos una variable local para poder seguir asignando aulas
+            Semaforos.mutex2.release();
+            if(miAsignacion == 6){//Si el administrador nos asigna un 6 es porque intentamos colarnos
+                return;
+            }
+            Semaforos.Sillas[miAsignacion].acquire(); //Coje una silla del aula que le han asignado
+            Semaforos.contadorAlumnos[miAsignacion]++;//Aumenta la cantidad de alumnos de esa aula para que cuando este llena alguien avise al profesor
+           
+           if(Semaforos.contadorAlumnos[miAsignacion] == 5){
+               System.out.println("En el aula " + miAsignacion + " ya estan todos y van a hacer el examen"); 
+               AulaLLena[miAsignacion] = true;
+               Semaforos.todosListos.release();
+                //Semaforos.examen[aulaAsignada].acquire();
+              }else{
+                Semaforos.examen[miAsignacion].acquire();//Esperamos a que nos den el examen
+           }
+            Thread.sleep(5000);//Tiempo que tarda en hacer un examen
+           
+            Semaforos.mutex2.acquire();
+            Semaforos.contadorAlumnos[miAsignacion]--;
+            
+             if(Semaforos.contadorAlumnos[miAsignacion] == 0){
+                 System.out.println("Aula " + miAsignacion + " vacia");
+                 AulaLLena[miAsignacion] = false;
+                 for (int i = 0; i < 20; i++) {//Hacemos 20 signals a sillas para simular que el aula está vacía
+                      Semaforos.Sillas[miAsignacion].release();
+                }
+            }
+             Semaforos.mutex2.release();
+            
+          //  -------------------------------------------------------------------- Hasta aqui el examen
+            
+        
+     }catch (InterruptedException ex) {
+        Logger.getLogger(Administrador.class.getName()).log(Level.SEVERE, null, ex);
+     }
+     
+     }
+}

@@ -1,0 +1,38 @@
+package selectividad;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static selectividad.Semaforos.AulaLLena;
+
+/**
+ *
+ * @author aculplay
+ */
+public class Administrador extends Thread {
+    int asignacion = 0;
+   
+    public void run(){ 
+        try {
+            while(true){
+                Semaforos.entrarAula.acquire(); //Espera a que llege un alumno y le pida entrar
+                System.out.println("Comprobando el DNI de un alumno");
+                Thread.sleep(1500);
+                int numero = (int)(Math.random()*10 -8);
+                Semaforos.mutex2.acquire();
+                if(numero > 0){ // Si el numero aleatorio es positivo suponemos que el Alumno intentaba colarse
+                    Alumno.aulaAsignada = 6;
+                    System.out.println("Un alumno ha intenado colarse");
+                }else{
+                    while(AulaLLena[asignacion] == true){ //Miramos que aula no está llena
+                        asignacion ++ ;
+                    }
+                    Alumno.aulaAsignada = asignacion;//Le pasamos el aula que no está llena
+                    System.out.println("Se le ha asignado el aula: " + asignacion);
+                }
+                Semaforos.asignacion.release();
+            }
+        }catch (InterruptedException ex) {
+            Logger.getLogger(Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+}
