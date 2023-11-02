@@ -1,0 +1,2 @@
+main.adb:203:40: expected type "Empleado_EmpresaAccess" defined at line 39
+main.adb:203:40: found type "Standard.Boolean"
